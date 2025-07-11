@@ -35,3 +35,9 @@ console.log("Total time spent:", totalTime(hobbyLog), "minutes"); // Total time
 console.log("Unique hobbies:", uniqueHobbies(hobbyLog)); // List of unique hobbies
 console.log("Sessions longer than 30 min:", longSessions(hobbyLog, 30)); // Sessions that lasted longer than 30 minutes
 console.log("Number of relaxed sessions:", countMood(hobbyLog, "relaxed")); // Number of session with "relaxed" mood
+
+// Suggestion: Create a reusable function to filter sessions by any property and value,
+// so we avoid repeating similar filter logic in different functions like countMood and longSessions.
+
+// NEW TEST: Count of sessions with 'focused' mood
+console.log("Focused sessions:", countMood(hobbyLog, "focused"));
