@@ -11,18 +11,18 @@ const hobbyLog = [
 
 // This function calculates the total time spent doing the activities stored in the log
 function totalTime(log) {
-  return log.reduce((sum, session) => sum + session.minutes, 0); // This returns the total time (in minutes) spent on all sessions in the log
+  return log.reduce((sum, session) => sum + session.minutes, 0); // This uses reduce (a higher-order function) to accumulate the total minutes from all sessions in the log
 }
 
 // This function returns the names of unique hobbies found in the log
 function uniqueHobbies(log) {
-  const names = log.map(entry => entry.hobby); // This stores the hobby names from each entry in the log
-  return [...new Set(names)]; // This returns an array of unique hobby names from the log
+  const names = log.map(entry => entry.hobby); // This uses map (a higher-order function) to extract the hobby name from each entry in the log
+  return [...new Set(names)]; // This removes duplicates by creating a Set and returns an array of unique hobby names
 }
 
 // This function returns sessions that lasted longer than the given minimum time
 function longSessions(log, minMinutes) {
-  return log.filter(entry => entry.minutes > minMinutes); // This returns all activity sessions that lasted longer than the specified minimum time
+  return log.filter(entry => entry.minutes > minMinutes); // This uses filter (a higher-order function) to return sessions with minutes greater than the minimum minutes
 }
 
 // This function counts how many times a specific mood type appears in the log
